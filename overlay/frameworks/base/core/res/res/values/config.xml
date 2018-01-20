@@ -387,6 +387,10 @@
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
 
+    <!-- If enabled, capacitive keys will only light up when pressed.
+         Otherwise, the buttons will light up whenever the user interacts with the device -->
+    <bool name="config_buttonLightOnKeypressOnly">true</bool>
+
     <!-- Rx current for bluetooth controller. 0 by default-->
     <integer translatable="false" name="config_bluetooth_rx_cur_ma">12</integer>
 
