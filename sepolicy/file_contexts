@@ -7,9 +7,6 @@
 # FRP
 /dev/block/bootdevice/by-name/config              u:object_r:frp_block_device:s0
 
-# Misc
-/system/bin/adjust_settings     	   u:object_r:adjust_settings_exec:s0
-
 # Sensord
 /system/bin/sensord    u:object_r:sensors_exec:s0
 /data/misc/sensor(/.*)?    u:object_r:sensors_data_file:s0

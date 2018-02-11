@@ -170,13 +170,13 @@ on post-fs-data
     chown system system /data/misc/sensor
     chmod 0755 /data/misc/sensor
     restorecon_recursive /data/misc/sensor
-    
+
     # Factory gsensor calibrate
     chown system system /persist/g_sensor_correct
 
     # Sensor
     mkdir /persist/sensors 0770 system system
- 
+
     # Create folder for mm-qcamera-daemon
     mkdir /data/camera 0770 media camera
 
@@ -356,19 +356,3 @@ service charger /charger
     class charger
     group system graphics
     seclabel u:r:healthd:s0
-
-service adjust_settings /system/bin/adjust_settings
-    class main
-    user root
-    disabled
-    oneshot
-
-on property:sys.boot_completed=1
-    start adjust_settings
-
-service set_sn /system/bin/adjust_serialno setsn
-    disabled
-    oneshot
-
-on property:sys.sn_set=1
-    start set_sn
