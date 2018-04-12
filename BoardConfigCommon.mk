@@ -68,7 +68,7 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # CMHW
-BOARD_HARDWARE_CLASS += device/bq/msm8916-common/cmhw/src
+BOARD_HARDWARE_CLASS += $(VENDOR_PATH)/lineagehw
 
 # Add suffix variable to uniquely identify the board
 TARGET_BOARD_SUFFIX := _32
