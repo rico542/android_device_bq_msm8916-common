@@ -14,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+VENDOR_PATH := device/bq/msm8916-common
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8916
@@ -29,9 +30,6 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
-
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 # Kernel
 TARGET_KERNEL_ARCH := arm
@@ -111,7 +109,7 @@ MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
 
 # Headers
-TARGET_SPECIFIC_HEADER_PATH := device/bq/msm8916-common/include
+TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
 
 # Healthd
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
