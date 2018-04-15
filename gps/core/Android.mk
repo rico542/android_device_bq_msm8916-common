@@ -15,6 +15,8 @@ else ifeq ($(BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET),true)
 LOCAL_CFLAGS += -DPDK_FEATURE_SET
 endif
 
+LOCAL_LDLIBS := -ldl -llog
+
 LOCAL_SHARED_LIBRARIES := \
     libutils \
     libcutils \
